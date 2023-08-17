@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom'
 function AuthLoading() {
 const navigate = useNavigate()
   const checkToken = () => {
-    const user = localStorage.getItem('user')
-    if(user){
+    const userLocal = localStorage.getItem('user')
+    if(userLocal.token){
         navigate('/profile')
     }
     else{
